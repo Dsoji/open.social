@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:opensocial/features/onboarding/presentation/onboarding_screen.dart';
 
-import '../features/bottom_nav/presentation/navbar.dart';
+// import '../features/bottom_nav/presentation/navbar.dart';
 
 final GoRouter router = GoRouter(
   initialLocation: '/',
@@ -9,7 +10,7 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: '/',
       builder: (BuildContext context, GoRouterState state) {
-        return const NaviBar();
+        return const OnboardingScreen();
       },
     ),
     // GoRoute(

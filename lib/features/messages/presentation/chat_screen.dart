@@ -21,7 +21,7 @@ class ChatScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 228, 221, 229),
+        backgroundColor: const Color.fromARGB(255, 228, 221, 229),
         title: Row(
           children: [
             CircleAvatar(
@@ -57,8 +57,8 @@ class ChatScreen extends StatelessWidget {
               margin: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
               decoration: BoxDecoration(
                 color: message.isSentByMe
-                    ? Color.fromARGB(255, 115, 112, 116)
-                    : Color.fromARGB(255, 174, 172, 175),
+                    ? const Color(0xFFFEC627)
+                    : const Color(0xFFF6F6F6),
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Text(message.content),
@@ -74,7 +74,7 @@ class ChatScreen extends StatelessWidget {
                 height: 38,
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 228, 221,
+                  color: const Color.fromARGB(255, 228, 221,
                       229), // Adjust the color to match your design
                   borderRadius: BorderRadius.circular(30), // Rounded corners
                 ),
@@ -118,12 +118,14 @@ class ChatScreen extends StatelessWidget {
 class ExpandableTextWidget extends StatefulWidget {
   final String text;
   final int maxLines;
-
-  const ExpandableTextWidget(
-      {super.key, required this.text, this.maxLines = 3});
+  const ExpandableTextWidget({
+    super.key,
+    required this.text,
+    required this.maxLines,
+  });
 
   @override
-  _ExpandableTextWidgetState createState() => _ExpandableTextWidgetState();
+  State<ExpandableTextWidget> createState() => _ExpandableTextWidgetState();
 }
 
 class _ExpandableTextWidgetState extends State<ExpandableTextWidget> {

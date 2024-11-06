@@ -6,7 +6,6 @@ import 'package:opensocial/features/bottom_nav/presentation/bottom_nav.dart';
 import '../../feeds/presentation/feed_page.dart';
 import '../../messages/presentation/messages.dart';
 import '../../profile/presentation/profile_screen.dart';
-import '../../profile/presentation/requests/requests_screen.dart';
 import '../../request_feed/presentation/request_feed.dart';
 
 class NaviBar extends StatefulWidget {
@@ -107,7 +106,8 @@ class _NaviBarState extends State<NaviBar> {
               },
               icon: HugeIcons.strokeRoundedScroll,
               label: 'Feeds',
-              color: pageIndex == 0 ? Colors.purple : Colors.grey,
+              color:
+                  pageIndex == 0 ? Theme.of(context).primaryColor : Colors.grey,
             ),
             BottomNav(
               index: 1,
@@ -116,7 +116,8 @@ class _NaviBarState extends State<NaviBar> {
               },
               icon: HugeIcons.strokeRoundedMouseScroll02,
               label: 'Requests',
-              color: pageIndex == 1 ? Colors.purple : Colors.grey,
+              color:
+                  pageIndex == 1 ? Theme.of(context).primaryColor : Colors.grey,
             ),
             BottomNav(
               index: 2,
@@ -125,7 +126,8 @@ class _NaviBarState extends State<NaviBar> {
               },
               icon: HugeIcons.strokeRoundedAiChat01,
               label: 'Messages',
-              color: pageIndex == 2 ? Colors.purple : Colors.grey,
+              color:
+                  pageIndex == 2 ? Theme.of(context).primaryColor : Colors.grey,
             ),
             BottomNav(
               index: 3,
@@ -134,7 +136,8 @@ class _NaviBarState extends State<NaviBar> {
               },
               icon: HugeIcons.strokeRoundedUser,
               label: 'Profile',
-              color: pageIndex == 3 ? Colors.purple : Colors.grey,
+              color:
+                  pageIndex == 3 ? Theme.of(context).primaryColor : Colors.grey,
             ),
           ],
         ),

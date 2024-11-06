@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:opensocial/routes/router.dart';
+import 'package:opensocial/utils/themes.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,10 +23,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: lightModeTheme(), // Default theme (light mode)
+      darkTheme: darkModeTheme(), // Dark mode theme
+      themeMode: ThemeMode.system,
       routerConfig: router,
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );

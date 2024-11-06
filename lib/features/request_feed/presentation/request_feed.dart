@@ -12,15 +12,15 @@ class RequestFeeds extends StatefulHookConsumerWidget {
 
 class _RequestFeedsState extends ConsumerState<RequestFeeds> {
   void _approveAction(BuildContext context, SwipeItem item) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text("You approved ${item.content.title}")),
-    );
+    // ScaffoldMessenger.of(context).showSnackBar(
+    //   SnackBar(content: Text("You approved ${item.content.title}")),
+    // );
   }
 
   void _declineAction(BuildContext context, SwipeItem item) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text("You declined ${item.content.title}")),
-    );
+    // ScaffoldMessenger.of(context).showSnackBar(
+    //   SnackBar(content: Text("You declined ${item.content.title}")),
+    // );
   }
 
   @override
@@ -65,10 +65,10 @@ class _RequestFeedsState extends ConsumerState<RequestFeeds> {
       ),
       body: Padding(
         padding: const EdgeInsets.only(
-          left: 24.0,
-          right: 24.0,
+          left: 12.0,
+          right: 12.0,
           top: 16.0,
-          bottom: 70,
+          bottom: 100,
         ),
         child: Column(
           children: [
@@ -113,7 +113,7 @@ class _RequestFeedsState extends ConsumerState<RequestFeeds> {
                         );
                       },
                       itemChanged: (SwipeItem item, int index) {
-                        print("Applicant at index: $index has been swiped.");
+                        // print("Applicant at index: $index has been swiped.");
                       },
                       upSwipeAllowed: true,
                       fillSpace: true,

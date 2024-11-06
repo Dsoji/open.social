@@ -121,7 +121,7 @@ class _ApplicantsPageState extends ConsumerState<ApplicantsPage> {
                         );
                       },
                       itemChanged: (SwipeItem item, int index) {
-                        print("Applicant at index: $index has been swiped.");
+                        // print("Applicant at index: $index has been swiped.");
                       },
                       upSwipeAllowed: true,
                       fillSpace: true,

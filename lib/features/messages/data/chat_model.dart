@@ -6,7 +6,7 @@ class ChatModel {
   ChatModel({required this.content, required this.isSentByMe});
 }
 
-final List<ChatModel> ChatModels = List.generate(
+final List<ChatModel> chatModels = List.generate(
   20,
   (index) => ChatModel(
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. $index",

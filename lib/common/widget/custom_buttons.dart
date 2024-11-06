@@ -34,7 +34,7 @@ class CustomFullButton extends StatelessWidget {
         height: 45,
         width: width,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(24),
           color: color,
         ),
         child: Center(
